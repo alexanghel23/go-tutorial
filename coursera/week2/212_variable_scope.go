@@ -1,5 +1,5 @@
 // the places in code where a variable can be accessed
-// a variable is first checked first inside the most inner block; if it's not found it's checking the next block above
+// a variable is first checked inside the most inner block; if it's not found it's checking the next block above
 package main
 
 import "fmt"
