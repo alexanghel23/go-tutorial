@@ -4,6 +4,7 @@ import (
 	"bufio"
 	"fmt"
 	"os"
+	"sort"
 	"strconv"
 )
 
@@ -26,7 +27,7 @@ var pl = fmt.Println
 
 func main() {
 
-	var sli = make([]int, 3)
+	var sli = make([]int, 0, 3)
 
 	for true {
 		fmt.Println("Enter integer:")
@@ -48,8 +49,9 @@ func main() {
 			continue
 		} else {
 			sli = append(sli, iptc)
+			sort.Ints(sli)
 			pl(sli)
 		}
 	}
-	pl(sli)
+	fmt.Printf("Final slice is %v: ", sli)
 }
